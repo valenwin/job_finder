@@ -23,6 +23,23 @@ class Speciality(models.Model):
         return f'{self.name}'
 
 
+class Site(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f'{self.name}'
+
+
+class Url(models.Model):
+    city = models.ForeignKey(City, on_delete=models.CASCADE)
+    speciality = models.ForeignKey(Speciality, on_delete=models.CASCADE)
+    site = models.ForeignKey(Site, on_delete=models.CASCADE)
+    url_address = models.CharField(max_length=250, unique=True)
+
+    def __str__(self):
+        return f'{self.url_address}'
+
+
 class Vacancy(models.Model):
     url = models.CharField(max_length=250, unique=True)
     title = models.CharField(max_length=250)
