@@ -10,7 +10,7 @@ from .forms import FindVacancyForm
 
 def search_job(request):
     form = FindVacancyForm()
-    return render(request, 'home.html', {
+    return render(request, 'search_vacancies.html', {
         'form': form
     })
 
@@ -28,12 +28,12 @@ def vacancy_list(request):
         vacancies = Vacancy.objects.filter(city=city_id, speciality=speciality_id, timestamp=today)
 
         if vacancies:
-            return render(request, 'vacancies.html', {
+            return render(request, 'vacancies_list.html', {
                 'form': form,
                 'jobs': vacancies
             })
 
-    return render(request, 'vacancies.html', {
+    return render(request, 'vacancies_list.html', {
         'form': form
     })
 
@@ -68,7 +68,7 @@ def vacancy_list(request):
 #             except IntegrityError:
 #                 pass
 #
-#     return render(request, 'vacancies.html', {
+#     return render(request, 'vacancies_list.html', {
 #         'jobs': jobs
 #     })
 
