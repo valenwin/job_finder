@@ -6,26 +6,36 @@
 {% endblock %}
 
 {% block header %}
-    {% include 'includes/header.html' %}
+    <header>
+        {% include 'includes/navbar.html' %}
+    </header>
 {% endblock %}
 
 {% block content %}
-    <div class="row my-5">
-        <div class="col">
-            <h1 class="my-5 ">Список вакансий</h1>
-        </div>
-    </div>
-
-    <div class="row my-5">
-        {% for job in jobs %}
-            <div class="col-12 text-left">
-                <h4><a href='{{ job.url }}'>{{ job.title }}</a></h4>
-                <p>{{ job.description }}</p><br/>
-                <p>Вакансия от компании: {{ job.company }}<small>. Дата размещения
-                    вакансии: {{ job.timestamp| date:"d-m-Y" }}</small></p>
-                <hr>
-                <br/>
+    <div class="container">
+        <div class="row my-5">
+            <div class="col">
+                <h1 class="my-5 text-center">Vacancies</h1>
             </div>
-        {% endfor %}
+        </div>
+
+        <div class="row my-5">
+            {% if jobs %}
+                {% for job in jobs %}
+                    <div class="col-12 text-left">
+                        <h4><a href='{{ job.url }}'>{{ job.title }}</a></h4>
+                        <p>{{ job.description }}</p><br/>
+                        <p>Вакансия от компании: {{ job.company }}<small>. Дата размещения
+                            вакансии: {{ job.timestamp| date:"d-m-Y" }}</small></p>
+                        <hr>
+                        <br/>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-12 text-center">
+                    <h2>No vacancies according to your query...</h2>
+                </div>
+            {% endif %}
+        </div>
     </div>
 {% endblock %}
