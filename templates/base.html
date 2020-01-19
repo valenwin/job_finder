@@ -41,7 +41,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- Font Awesome Icons -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
-    <link rel='stylesheet' id='fontawesome-css' href='https://use.fontawesome.com/releases/v5.0.1/css/all.css?ver=4.9.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='fontawesome-css' href='https://use.fontawesome.com/releases/v5.0.1/css/all.css?ver=4.9.1'
+          type='text/css' media='all'/>
 
     <!-- Google Fonts -->
     <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
@@ -96,7 +97,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <a href="#choose" class="scroll">About Us</a>
                 </li>
                 <li>
-                    <a href="{% url 'search_job_url' %}" class="active">Search Job</a>
+                    <a href="{% url 'scraping:search_job_url' %}" class="active">Search Job</a>
+                </li>
+                <li>
+                    <a href="{% url 'scraping:get_vacancies_url' %}" class="active">Vacancies</a>
                 </li>
                 <li>
                     <a href="#overview" class="scroll">Overview</a>
@@ -121,449 +125,449 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </nav>
     <!-- //nav -->
 
-    {% block content %}
-        <!-- banner -->
-        <div class="banner layer" id="home">
-            <div class="container">
-                <div class="row banner-text">
-                    <div class="slider-info col-lg-8">
-                        <div class="agileinfo-logo mt-5">
-                            <h2 data-aos="fade-down">
-                                <span class="fab fa-blackberry text-center"></span> Modern Solution -
-                            </h2>
-                        </div>
-                        <h3 class="txt-w3_agile" data-aos="fade-down">Professional Landing Page </h3>
-                        <a class="btn mt-4 mr-2 text-capitalize" data-aos="fade-up" href="#" data-toggle="modal"
-                           data-target="#exampleModalCenter1" role="button">read more</a>
-                        <a class="btn mt-4 text-capitalize" data-aos="fade-up" href="#" data-toggle="modal"
-                           data-target="#exampleModal" role="button">watch video <i class="fas fa-play-circle"></i></a>
+    <!-- banner -->
+    <div class="banner layer" id="home">
+        <div class="container">
+            <div class="row banner-text">
+                <div class="slider-info col-lg-8">
+                    <div class="agileinfo-logo mt-5">
+                        <h2 data-aos="fade-down">
+                            <span class="fab fa-blackberry text-center"></span> Modern Solution -
+                        </h2>
                     </div>
-                    <div class="col-lg-4 col-md-8 mt-lg-0 mt-5 banner-form" data-aos="fade-left">
-                        <h5 style="margin-top: 70px;"><i class="fas mr-2 fa-laptop"></i> Register Now</h5>
-                        <form action="#" class="mt-4" method="post">
-                            <input class="form-control" type="text" name="Name" placeholder="Name" required=""/>
-                            <input class="form-control" type="email" name="Email" placeholder="Email" required=""/>
-                            <input class="form-control" type="text" name="Number" placeholder="Phone Number"
-                                   required=""/>
-                            <input class="form-control" type="password" name="Number" placeholder="Password"
-                                   required=""/>
-                            <input class="form-control text-capitalize" type="submit" value="Register Account">
-                        </form>
+                    <h3 class="txt-w3_agile" data-aos="fade-down">Professional Landing Page </h3>
+                    <a class="btn mt-4 mr-2 text-capitalize" data-aos="fade-up" href="#" data-toggle="modal"
+                       data-target="#exampleModalCenter1" role="button">read more</a>
+                    <a class="btn mt-4 text-capitalize" data-aos="fade-up" href="#" data-toggle="modal"
+                       data-target="#exampleModal" role="button">watch video <i class="fas fa-play-circle"></i></a>
+                </div>
+                <div class="col-lg-4 col-md-8 mt-lg-0 mt-5 banner-form" data-aos="fade-left">
+                    <h5 style="margin-top: 70px;"><i class="fas mr-2 fa-laptop"></i> Register Now</h5>
+                    <form action="#" class="mt-4" method="post">
+                        <input class="form-control" type="text" name="Name" placeholder="Name" required=""/>
+                        <input class="form-control" type="email" name="Email" placeholder="Email" required=""/>
+                        <input class="form-control" type="text" name="Number" placeholder="Phone Number"
+                               required=""/>
+                        <input class="form-control" type="password" name="Number" placeholder="Password"
+                               required=""/>
+                        <input class="form-control text-capitalize" type="submit" value="Register Account">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //banner -->
+</header>
+<!-- //header -->
+
+{% block content %}
+    <!-- banner bottom -->
+    <section class="banner-bottom py-5">
+        <div class="container py-md-3">
+            <h4 class="text-center" data-aos="zoom-in">Trusted by the world's best companies</h4>
+            <ul class="list-unstyled pt-5 partners-icon text-center">
+                <li data-aos="fade-up">
+                    <i class="fab fa-supple clr1"></i>
+                </li>
+                <li data-aos="fade-up">
+                    <i class="fab fa-aviato clr2"></i>
+                </li>
+                <li data-aos="fade-up">
+                    <i class="fab fa-cpanel clr3"></i>
+                </li>
+                <li data-aos="fade-up">
+                    <i class="fab fa-hooli clr4"></i>
+                </li>
+                <li data-aos="fade-up">
+                    <i class="fab fa-supple clr5"></i>
+                </li>
+                <li data-aos="fade-up">
+                    <i class="fab fa-aviato clr6"></i>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- //banner bottom -->
+
+    <!-- why choose us -->
+    <section class="choose py-5" id="choose">
+        <div class="container py-md-3">
+            <h3 class="heading mb-5 text-center" data-aos="zoom-in"> Why Choose Us</h3>
+            <div class="feature-grids row">
+                <div class="col-lg-4 col-md-6" data-aos="fade-right">
+                    <div class="f1 icon1 p-4">
+                        <i class="fab fa-bandcamp"></i>
+                        <h3 class="my-3">Design & Branding</h3>
+                        <p>Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus lacinia id erat eu
+                            ullamcorper. Nunc id ipsum.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="f1 icon2 p-4">
+                        <i class="fab fa-codepen"></i>
+                        <h3 class="my-3">Safe & Secure</h3>
+                        <p>Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus lacinia id erat eu
+                            ullamcorper. Nunc id ipsum.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-lg-0 mt-4" data-aos="fade-left">
+                    <div class="f1 icon3 p-4">
+                        <i class="fab fa-bitcoin"></i>
+                        <h3 class="my-3">Fresh Interfaces</h3>
+                        <p>Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus lacinia id erat eu
+                            ullamcorper. Nunc id ipsum.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- //banner -->
-        </header>
-        <!-- //header -->
+    </section>
+    <!-- //why choose us -->
 
-        <!-- banner bottom -->
-        <section class="banner-bottom py-5">
-            <div class="container py-md-3">
-                <h4 class="text-center" data-aos="zoom-in">Trusted by the world's best companies</h4>
-                <ul class="list-unstyled pt-5 partners-icon text-center">
-                    <li data-aos="fade-up">
-                        <i class="fab fa-supple clr1"></i>
-                    </li>
-                    <li data-aos="fade-up">
-                        <i class="fab fa-aviato clr2"></i>
-                    </li>
-                    <li data-aos="fade-up">
-                        <i class="fab fa-cpanel clr3"></i>
-                    </li>
-                    <li data-aos="fade-up">
-                        <i class="fab fa-hooli clr4"></i>
-                    </li>
-                    <li data-aos="fade-up">
-                        <i class="fab fa-supple clr5"></i>
-                    </li>
-                    <li data-aos="fade-up">
-                        <i class="fab fa-aviato clr6"></i>
-                    </li>
-                </ul>
+    <!-- quote -->
+    <section class="quote bg-light py-5">
+        <div class="container py-md-3" data-aos="fade-up">
+            <h4>Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus lacinia id erat eu
+                ullamcorper.</h4>
+            <div class="start text-right mt-4" data-aos="flip-left">
+                <a href="{% url 'scraping:search_job_url' %}" class="active">Get Started </a>
             </div>
-        </section>
-        <!-- //banner bottom -->
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <!-- //quote -->
 
-        <!-- why choose us -->
-        <section class="choose py-5" id="choose">
-            <div class="container py-md-3">
-                <h3 class="heading mb-5 text-center" data-aos="zoom-in"> Why Choose Us</h3>
-                <div class="feature-grids row">
-                    <div class="col-lg-4 col-md-6" data-aos="fade-right">
-                        <div class="f1 icon1 p-4">
-                            <i class="fab fa-bandcamp"></i>
-                            <h3 class="my-3">Design & Branding</h3>
-                            <p>Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus lacinia id erat eu
-                                ullamcorper. Nunc id ipsum.</p>
+    <!-- process -->
+    <section class="process py-5" id="overview">
+        <div class="container py-md-5">
+            <div class="row process-grids">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h4 class="mb-4">Excepteur sint occaecat non lorem proident, sunt in culpa quis.</h4>
+                    <p class="mb-3">Morbi tincidunt nisi tortor, iaculis maximus eros vestibulum at. Ut pulvinar
+                        tortor non
+                        augue fringilla, fermentum consequat nisi rutrum. Orci varius natoque penatibus et magnis
+                        dis
+                        parturient montes, nascetur. Nullam luctus hendrerit sapien,
+                        sed dictum est. mattis egestas.</p>
+                    <p>Morbi tincidunt nisi tortor, iaculis maximus eros vestibulum at. Ut pulvinar tortor non augue
+                        fringilla, fermentum consequat nisi rutrum. Orci varius natoque penatibus et magnis dis
+                        parturient
+                        montes.</p>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <img src="{% static 'img/sq_img_1.jpg' %}" alt="" class="img-fluid"/>
+                </div>
+                <div class="col-md-6 px-5 mt-5" data-aos="fade-right">
+                    <img src="{% static 'img/sq_img_2.jpg' %}" alt="" class="img-fluid"/>
+                </div>
+                <div class="col-lg-6 mt-5" data-aos="fade-left">
+                    <h4 class="mb-4">Excepteur sint occaecat non lorem proident, sunt in culpa quis.</h4>
+                    <p class="mb-3">Morbi tincidunt nisi tortor, iaculis maximus eros vestibulum at. Ut pulvinar
+                        tortor non
+                        augue fringilla, fermentum consequat nisi rutrum. Orci varius natoque penatibus et magnis
+                        dis
+                        parturient montes, nascetur. Nullam luctus hendrerit sapien,
+                        sed dictum est. mattis egestas.</p>
+                    <p>Morbi tincidunt nisi tortor, iaculis maximus eros vestibulum at. Ut pulvinar tortor non augue
+                        fringilla, fermentum consequat nisi rutrum. Orci varius natoque penatibus et magnis dis
+                        parturient
+                        montes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //process -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="{% static 'img/portfolio/fullsize/1.jpg' %}">
+                        <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/1.jpg' %}" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">
+                                Category
+                            </div>
+                            <div class="project-name">
+                                Project Name
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                        <div class="f1 icon2 p-4">
-                            <i class="fab fa-codepen"></i>
-                            <h3 class="my-3">Safe & Secure</h3>
-                            <p>Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus lacinia id erat eu
-                                ullamcorper. Nunc id ipsum.</p>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="{% static 'img/portfolio/fullsize/6.jpg' %}">
+                        <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/6.jpg' %}" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">
+                                Category
+                            </div>
+                            <div class="project-name">
+                                Project Name
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mt-lg-0 mt-4" data-aos="fade-left">
-                        <div class="f1 icon3 p-4">
-                            <i class="fab fa-bitcoin"></i>
-                            <h3 class="my-3">Fresh Interfaces</h3>
-                            <p>Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus lacinia id erat eu
-                                ullamcorper. Nunc id ipsum.</p>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="{% static 'img/portfolio/fullsize/2.jpg' %}">
+                        <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/2.jpg' %}" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">
+                                Category
+                            </div>
+                            <div class="project-name">
+                                Project Name
+                            </div>
                         </div>
-                    </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="{% static 'img/portfolio/fullsize/3.jpg' %}">
+                        <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/3.jpg' %}" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">
+                                Category
+                            </div>
+                            <div class="project-name">
+                                Project Name
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="{% static 'img/portfolio/fullsize/5.jpg' %}">
+                        <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/5.jpg' %}" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">
+                                Category
+                            </div>
+                            <div class="project-name">
+                                Project Name
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box" href="{% static 'img/portfolio/fullsize/4.jpg' %}">
+                        <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/4.jpg' %}" alt="">
+                        <div class="portfolio-box-caption p-3">
+                            <div class="project-category text-white-50">
+                                Category
+                            </div>
+                            <div class="project-name">
+                                Project Name
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </section>
-        <!-- //why choose us -->
+        </div>
+    </section>
+    <!-- //portfolio -->
 
-        <!-- quote -->
-        <section class="quote bg-light py-5">
-            <div class="container py-md-3" data-aos="fade-up">
-                <h4>Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus lacinia id erat eu
-                    ullamcorper.</h4>
-                <div class="start text-right mt-4" data-aos="flip-left">
-                    <a href="{% url 'search_job_url' %}" class="active">Get Started </a>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </section>
-        <!-- //quote -->
-
-        <!-- process -->
-        <section class="process py-5" id="overview">
-            <div class="container py-md-5">
-                <div class="row process-grids">
-                    <div class="col-lg-6" data-aos="fade-right">
-                        <h4 class="mb-4">Excepteur sint occaecat non lorem proident, sunt in culpa quis.</h4>
-                        <p class="mb-3">Morbi tincidunt nisi tortor, iaculis maximus eros vestibulum at. Ut pulvinar
-                            tortor non
-                            augue fringilla, fermentum consequat nisi rutrum. Orci varius natoque penatibus et magnis
-                            dis
-                            parturient montes, nascetur. Nullam luctus hendrerit sapien,
-                            sed dictum est. mattis egestas.</p>
-                        <p>Morbi tincidunt nisi tortor, iaculis maximus eros vestibulum at. Ut pulvinar tortor non augue
-                            fringilla, fermentum consequat nisi rutrum. Orci varius natoque penatibus et magnis dis
-                            parturient
-                            montes.</p>
-                    </div>
-                    <div class="col-md-6" data-aos="fade-left">
-                        <img src="{% static 'img/sq_img_1.jpg' %}" alt="" class="img-fluid"/>
-                    </div>
-                    <div class="col-md-6 px-5 mt-5" data-aos="fade-right">
-                        <img src="{% static 'img/sq_img_2.jpg' %}" alt="" class="img-fluid"/>
-                    </div>
-                    <div class="col-lg-6 mt-5" data-aos="fade-left">
-                        <h4 class="mb-4">Excepteur sint occaecat non lorem proident, sunt in culpa quis.</h4>
-                        <p class="mb-3">Morbi tincidunt nisi tortor, iaculis maximus eros vestibulum at. Ut pulvinar
-                            tortor non
-                            augue fringilla, fermentum consequat nisi rutrum. Orci varius natoque penatibus et magnis
-                            dis
-                            parturient montes, nascetur. Nullam luctus hendrerit sapien,
-                            sed dictum est. mattis egestas.</p>
-                        <p>Morbi tincidunt nisi tortor, iaculis maximus eros vestibulum at. Ut pulvinar tortor non augue
-                            fringilla, fermentum consequat nisi rutrum. Orci varius natoque penatibus et magnis dis
-                            parturient
-                            montes.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- //process -->
-
-        <!-- Portfolio Section -->
-        <section id="portfolio">
-            <div class="container-fluid p-0">
-                <div class="row no-gutters">
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="{% static 'img/portfolio/fullsize/1.jpg' %}">
-                            <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/1.jpg' %}" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="{% static 'img/portfolio/fullsize/6.jpg' %}">
-                            <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/6.jpg' %}" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="{% static 'img/portfolio/fullsize/2.jpg' %}">
-                            <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/2.jpg' %}" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="{% static 'img/portfolio/fullsize/3.jpg' %}">
-                            <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/3.jpg' %}" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="{% static 'img/portfolio/fullsize/5.jpg' %}">
-                            <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/5.jpg' %}" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="{% static 'img/portfolio/fullsize/4.jpg' %}">
-                            <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/4.jpg' %}" alt="">
-                            <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- //portfolio -->
-
-        <!-- faqs -->
-        <section class="faq-w3l py-5" id="faq">
-            <div class="container py-lg-3">
-                <h3 class="heading mb-5 text-center" data-aos="zoom-in"> Frequently Asked Questions</h3>
-                <div class="row faq-info">
-                    <div class=" col-md-6 faq-w3agile">
-                        <ul class="faq pl-sm-4 pl-3">
-                            <li class="item1 item mt-sm-4 mt-3 pt-3 pl-2" data-aos="flip-left">
-                                <h4>Lorem ipsum dolor sit amet? </h4>
-                                <ul>
-                                    <li class="subitem1 mt-3">
-                                        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                                            nibh
-                                            euismod tincidunt ut laoreet dolore.</p>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="item2 item mt-sm-4 mt-3 pt-3 pl-2" data-aos="flip-left">
-                                <h4>Lorem ipsum dolor sit amet? </h4>
-                                <ul>
-                                    <li class="subitem1 mt-3">
-                                        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                                            nibh
-                                            euismod tincidunt ut laoreet dolore.</p>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="item3 item mt-sm-4 mt-3 pt-3 pl-2" data-aos="flip-left">
-                                <h4>Lorem ipsum dolor sit amet? </h4>
-                                <ul>
-                                    <li class="subitem1 mt-3">
-                                        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                                            nibh
-                                            euismod tincidunt ut laoreet dolore.</p>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class=" col-md-6 faq-w3agile">
-                        <ul class="faq pl-sm-4 pl-3">
-                            <li class="item5 item mt-sm-4 mt-3 pt-3 pl-2" data-aos="flip-right">
-                                <h4>Lorem ipsum dolor sit amet? </h4>
-                                <ul>
-                                    <li class="subitem1 mt-3">
-                                        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                                            nibh
-                                            euismod tincidunt ut laoreet dolore.</p>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="item6 item mt-sm-4 mt-3 pt-3 pl-2" data-aos="flip-right">
-                                <h4>Lorem ipsum dolor sit amet? </h4>
-                                <ul>
-                                    <li class="subitem1 mt-3">
-                                        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                                            nibh
-                                            euismod tincidunt ut laoreet dolore.</p>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="item7 item mt-sm-4 mt-3 pt-3 pl-2" data-aos="flip-right">
-                                <h4>Lorem ipsum dolor sit amet? </h4>
-                                <ul>
-                                    <li class="subitem1 mt-3">
-                                        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                                            nibh
-                                            euismod tincidunt ut laoreet dolore.</p>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- //faqs -->
-
-        <!-- testimonials -->
-        <section class="testimonials bg-light py-5" id="testimonials">
-            <div class="container py-lg-3">
-                <h3 class="heading mb-5 text-center" data-aos="zoom-in"> Honorable Employees</h3>
-                <div class="row test-grids">
-                    <div class="col-md-2 col-sm-7 col-9" data-aos="zoom-in">
-                        <img src="{% static 'img/person_1.jpeg' %}" alt="" class="img-fluid"
-                             style="margin: 0 50px 70px 50px"/>
-                        <img src="{% static 'img/person_2.jpeg' %}" alt="" class="img-fluid"
-                             style="margin: 0 50px 70px 50px"/>
-                        <img src="{% static 'img/person_3.jpeg' %}" alt="" class="img-fluid"
-                             style="margin: 0 50px 70px 50px"/>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="callbacks_container">
-
-                            <ul class="rslides" id="slider3">
-                                <li data-aos="fade-down">
-                                    <div class="testi-pos">
-                                        <h4>john watson</h4>
-                                        <span class="">- congue leo</span>
-                                        <ul class="d-flex mt-2">
-                                            <li><i class="fas mr-1 fa-star"></i></li>
-                                            <li><i class="fas mr-1 fa-star"></i></li>
-                                            <li><i class="fas mr-1 fa-star"></i></li>
-                                            <li><i class="fas mr-1 fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="testi-agile">
-                                        <p>
-                                            <i class="fas fa-quote-left pr-3"></i>Vivamus magna justo, lacinia eget
-                                            consectetur
-                                            sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat.Nulla
-                                            quis
-                                            lorem ut libero malesuada feugiat. Donec rutrum congue leo eget malesuada.
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        </p>
-                                    </div>
-                                </li>
-                                <li data-aos="fade-down">
-                                    <div class="testi-pos">
-                                        <h4>Paul walkner</h4>
-                                        <span class="">- lacinia eget</span>
-                                        <ul class="d-flex mt-2">
-                                            <li><i class="fas mr-1 fa-star"></i></li>
-                                            <li><i class="fas mr-1 fa-star"></i></li>
-                                            <li><i class="fas mr-1 fa-star"></i></li>
-                                            <li><i class="fas mr-1 fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="testi-agile">
-                                        <p>
-                                            <i class="fas fa-quote-left pr-3"></i>Donec rutrum congue leo eget
-                                            consectetur sed,
-                                            convallis at tellus. Nulla quis lorem ut libero malesuada feugiat.Nulla quis
-                                            lorem
-                                            ut libero malesuada feugiat. Donec rutrum congue leo eget malesuada.
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                                        </p>
-                                    </div>
-                                </li>
-                                <li data-aos="fade-down">
-                                    <div class="testi-pos">
-                                        <h4>Anderson</h4>
-                                        <span class="">- Donec rutru</span>
-                                        <ul class="d-flex mt-2">
-                                            <li><i class="fas mr-1 fa-star"></i></li>
-                                            <li><i class="fas mr-1 fa-star"></i></li>
-                                            <li><i class="fas mr-1 fa-star"></i></li>
-                                            <li><i class="fas mr-1 fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="testi-agile">
-                                        <p>
-                                            <i class="fas fa-quote-left pr-3"></i>Vivamus magna justo, lacinia eget
-                                            consectetur
-                                            sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat.Nulla
-                                            quis
-                                            lorem ut libero malesuada feugiat. Donec rutrum congue leo eget malesuada.
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                                        </p>
-                                    </div>
+    <!-- faqs -->
+    <section class="faq-w3l py-5" id="faq">
+        <div class="container py-lg-3">
+            <h3 class="heading mb-5 text-center" data-aos="zoom-in"> Frequently Asked Questions</h3>
+            <div class="row faq-info">
+                <div class=" col-md-6 faq-w3agile">
+                    <ul class="faq pl-sm-4 pl-3">
+                        <li class="item1 item mt-sm-4 mt-3 pt-3 pl-2" data-aos="flip-left">
+                            <h4>Lorem ipsum dolor sit amet? </h4>
+                            <ul>
+                                <li class="subitem1 mt-3">
+                                    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                                        nibh
+                                        euismod tincidunt ut laoreet dolore.</p>
                                 </li>
                             </ul>
-                        </div>
+                        </li>
+                        <li class="item2 item mt-sm-4 mt-3 pt-3 pl-2" data-aos="flip-left">
+                            <h4>Lorem ipsum dolor sit amet? </h4>
+                            <ul>
+                                <li class="subitem1 mt-3">
+                                    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                                        nibh
+                                        euismod tincidunt ut laoreet dolore.</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="item3 item mt-sm-4 mt-3 pt-3 pl-2" data-aos="flip-left">
+                            <h4>Lorem ipsum dolor sit amet? </h4>
+                            <ul>
+                                <li class="subitem1 mt-3">
+                                    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                                        nibh
+                                        euismod tincidunt ut laoreet dolore.</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-md-6 faq-w3agile">
+                    <ul class="faq pl-sm-4 pl-3">
+                        <li class="item5 item mt-sm-4 mt-3 pt-3 pl-2" data-aos="flip-right">
+                            <h4>Lorem ipsum dolor sit amet? </h4>
+                            <ul>
+                                <li class="subitem1 mt-3">
+                                    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                                        nibh
+                                        euismod tincidunt ut laoreet dolore.</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="item6 item mt-sm-4 mt-3 pt-3 pl-2" data-aos="flip-right">
+                            <h4>Lorem ipsum dolor sit amet? </h4>
+                            <ul>
+                                <li class="subitem1 mt-3">
+                                    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                                        nibh
+                                        euismod tincidunt ut laoreet dolore.</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="item7 item mt-sm-4 mt-3 pt-3 pl-2" data-aos="flip-right">
+                            <h4>Lorem ipsum dolor sit amet? </h4>
+                            <ul>
+                                <li class="subitem1 mt-3">
+                                    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                                        nibh
+                                        euismod tincidunt ut laoreet dolore.</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //faqs -->
+
+    <!-- testimonials -->
+    <section class="testimonials bg-light py-5" id="testimonials">
+        <div class="container py-lg-3">
+            <h3 class="heading mb-5 text-center" data-aos="zoom-in"> Honorable Employees</h3>
+            <div class="row test-grids">
+                <div class="col-md-2 col-sm-7 col-9" data-aos="zoom-in">
+                    <img src="{% static 'img/person_1.jpeg' %}" alt="" class="img-fluid"
+                         style="margin: 0 50px 70px 50px"/>
+                    <img src="{% static 'img/person_2.jpeg' %}" alt="" class="img-fluid"
+                         style="margin: 0 50px 70px 50px"/>
+                    <img src="{% static 'img/person_3.jpeg' %}" alt="" class="img-fluid"
+                         style="margin: 0 50px 70px 50px"/>
+                </div>
+                <div class="col-md-8">
+                    <div class="callbacks_container">
+
+                        <ul class="rslides" id="slider3">
+                            <li data-aos="fade-down">
+                                <div class="testi-pos">
+                                    <h4>john watson</h4>
+                                    <span class="">- congue leo</span>
+                                    <ul class="d-flex mt-2">
+                                        <li><i class="fas mr-1 fa-star"></i></li>
+                                        <li><i class="fas mr-1 fa-star"></i></li>
+                                        <li><i class="fas mr-1 fa-star"></i></li>
+                                        <li><i class="fas mr-1 fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="testi-agile">
+                                    <p>
+                                        <i class="fas fa-quote-left pr-3"></i>Vivamus magna justo, lacinia eget
+                                        consectetur
+                                        sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat.Nulla
+                                        quis
+                                        lorem ut libero malesuada feugiat. Donec rutrum congue leo eget malesuada.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-down">
+                                <div class="testi-pos">
+                                    <h4>Paul walkner</h4>
+                                    <span class="">- lacinia eget</span>
+                                    <ul class="d-flex mt-2">
+                                        <li><i class="fas mr-1 fa-star"></i></li>
+                                        <li><i class="fas mr-1 fa-star"></i></li>
+                                        <li><i class="fas mr-1 fa-star"></i></li>
+                                        <li><i class="fas mr-1 fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="testi-agile">
+                                    <p>
+                                        <i class="fas fa-quote-left pr-3"></i>Donec rutrum congue leo eget
+                                        consectetur sed,
+                                        convallis at tellus. Nulla quis lorem ut libero malesuada feugiat.Nulla quis
+                                        lorem
+                                        ut libero malesuada feugiat. Donec rutrum congue leo eget malesuada.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-down">
+                                <div class="testi-pos">
+                                    <h4>Anderson</h4>
+                                    <span class="">- Donec rutru</span>
+                                    <ul class="d-flex mt-2">
+                                        <li><i class="fas mr-1 fa-star"></i></li>
+                                        <li><i class="fas mr-1 fa-star"></i></li>
+                                        <li><i class="fas mr-1 fa-star"></i></li>
+                                        <li><i class="fas mr-1 fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="testi-agile">
+                                    <p>
+                                        <i class="fas fa-quote-left pr-3"></i>Vivamus magna justo, lacinia eget
+                                        consectetur
+                                        sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat.Nulla
+                                        quis
+                                        lorem ut libero malesuada feugiat. Donec rutrum congue leo eget malesuada.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- //testimonials -->
+        </div>
+    </section>
+    <!-- //testimonials -->
 
-        <!-- contact -->
-        <section class="contact py-5" id="contact">
-            <div class="container py-lg-3">
-                <h3 class="heading mb-5 text-center" data-aos="zoom-in"> Get in touch</h3>
-                <form action="#" method="post" data-aos="fade-up">
-                    <div class="row">
-                        <div class="col-md-6 styled-input mt-0">
-                            <input type="text" name="Name" placeholder="First Name" required="">
-                        </div>
-                        <div class="col-md-6 styled-input mt-md-0">
-                            <input type="text" name="Name" placeholder="Last Name" required="">
-                        </div>
+    <!-- contact -->
+    <section class="contact py-5" id="contact">
+        <div class="container py-lg-3">
+            <h3 class="heading mb-5 text-center" data-aos="zoom-in"> Get in touch</h3>
+            <form action="#" method="post" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-md-6 styled-input mt-0">
+                        <input type="text" name="Name" placeholder="First Name" required="">
                     </div>
-                    <div class="row">
-                        <div class="col-md-6 styled-input">
-                            <input type="email" name="Email" placeholder="Email" required="">
-                        </div>
-                        <div class="col-md-6 styled-input">
-                            <input type="text" name="phone" placeholder="Phone Number" required="">
-                        </div>
+                    <div class="col-md-6 styled-input mt-md-0">
+                        <input type="text" name="Name" placeholder="Last Name" required="">
                     </div>
-                    <div class="styled-input">
-                        <textarea name="Message" placeholder="Message" required=""></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 styled-input">
+                        <input type="email" name="Email" placeholder="Email" required="">
                     </div>
-                    <div class="click text-center mt-3">
-                        <input type="submit" value="Submit">
+                    <div class="col-md-6 styled-input">
+                        <input type="text" name="phone" placeholder="Phone Number" required="">
                     </div>
-                </form>
-            </div>
-        </section>
-        <!-- //contact -->
-    {% endblock %}
+                </div>
+                <div class="styled-input">
+                    <textarea name="Message" placeholder="Message" required=""></textarea>
+                </div>
+                <div class="click text-center mt-3">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- //contact -->
+{% endblock %}
 <!--footer -->
 <footer>
     <section class="footer footer_w3layouts_section_1its py-5">
@@ -603,7 +607,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="row">
                         <ul class="col-6 links">
                             <li><a href="#choose" class="scroll">Why Choose Us </a></li>
-                            <li><a href="{% url 'search_job_url' %}" class="active">Search Job </a></li>
+                            <li><a href="{% url 'scraping:search_job_url' %}" class="active">Search Job </a></li>
                             <li><a href="#overview" class="scroll">Overview </a></li>
                             <li><a href="#portfolio" class="scroll">Your future</a></li>
                             <li><a href="#faq" class="scroll">Faq's </a></li>

@@ -29,7 +29,7 @@ class Vacancy(models.Model):
     description = models.TextField(blank=True)
     company = models.CharField(max_length=100, blank=True)
     city = models.ForeignKey(City, on_delete=models.CASCADE, blank=True)
-    speciality = models.ForeignKey(Speciality, on_delete=models.CASCADE, blank=True)
+    speciality = models.ForeignKey(Speciality, on_delete=models.CASCADE, max_length=100, blank=True)
     timestamp = models.DateField(auto_now_add=True)
 
     class Meta:
