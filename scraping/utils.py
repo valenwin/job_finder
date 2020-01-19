@@ -8,10 +8,10 @@ headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 5.1; rv:47.0) Gecko/20100101 F
            }
 
 
-def work():
+def work(base_url):
     session = requests.Session()
 
-    base_url = 'https://www.work.ua/jobs-kyiv-python/'
+    #base_url = 'https://www.work.ua/jobs-kyiv-python/'
 
     domain = 'https://www.work.ua'
     jobs = []
@@ -46,10 +46,10 @@ def work():
     return jobs
 
 
-def rabota():
+def rabota(base_url):
     session = requests.Session()
 
-    base_url = 'https://rabota.ua/jobsearch/vacancy_list?regionId=1&keyWords=python&period=2&lastdate='
+    #base_url = 'https://rabota.ua/jobsearch/vacancy_list?regionId=1&keyWords=python&period=2&lastdate='
 
     domain = 'https://rabota.ua'
     jobs = []
@@ -95,10 +95,10 @@ def rabota():
     return jobs
 
 
-def dou():
+def dou(base_url):
     session = requests.Session()
 
-    base_url = 'https://jobs.dou.ua/vacancies/?city=%D0%9A%D0%B8%D0%B5%D0%B2&category=Python'
+    #base_url = 'https://jobs.dou.ua/vacancies/?city=%D0%9A%D0%B8%D0%B5%D0%B2&category=Python'
 
     jobs = []
     urls = [base_url]

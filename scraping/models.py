@@ -37,7 +37,7 @@ class Url(models.Model):
     url_address = models.CharField(max_length=250, unique=True)
 
     def __str__(self):
-        return f'{self.url_address}'
+        return f'Speciality: {self.speciality} in {self.city} on site {self.site}'
 
 
 class Vacancy(models.Model):
