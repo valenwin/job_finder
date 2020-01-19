@@ -1,0 +1,59 @@
+{% load static %}
+
+<!-- nav -->
+<nav class="main-header">
+    <div id="brand" data-aos="zoom-in-up">
+        <div id="logo">
+            <a href="{% url 'home_page' %}">
+                <i class="fab fa-blackberry"></i>
+            </a>
+        </div>
+        <div id="word-mark">
+            <h1>
+                <a href="{% url 'home_page' %}">Job Finder</a>
+            </h1>
+        </div>
+    </div>
+    <div id="menu">
+        <div id="menu-toggle">
+            <div id="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <ul class="text-center text-capitalize nav-agile" data-aos="zoom-in-up">
+            <li>
+                <a href="{% url 'home_page' %}" class="active">home</a>
+            </li>
+            <li>
+                <a href="#choose" class="scroll">About Us</a>
+            </li>
+            <li>
+                <a href="{% url 'scraping:search_job_url' %}" class="active">Search Job</a>
+            </li>
+            <li>
+                <a href="{% url 'scraping:get_vacancies_url' %}" class="active">Vacancies</a>
+            </li>
+            <li>
+                <a href="#overview" class="scroll">Overview</a>
+            </li>
+            <li>
+                <a href="#portfolio" class="scroll">Your future</a>
+            </li>
+            <li>
+                <a href="#faq" class="scroll">Faq's</a>
+            </li>
+            <li>
+                <a href="#contact" class="scroll">Contact</a>
+            </li>
+            <li>
+                <button type="button" class="btn w3ls-btn" data-toggle="modal" aria-pressed="false"
+                        data-target="#exampleModalCenter2">
+                    Login
+                </button>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- //nav -->
