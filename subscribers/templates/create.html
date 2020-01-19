@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Sign Up
+{% endblock title %}
+
+{% block content %}
+    <div class="row my-5">
+        <div class="col-md-10">
+            <h1 class="my-5 text-center">User Registration</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 mx-auto text-left">
+            <form method="post" action=""> {% csrf_token %}
+                <p><label for="id_email">Email:</label>
+                    {{ form.email }}</p>
+                <p><label for="id_city">City:</label>
+                    {{ form.city }}   </p>
+                <p><label for="id_specialty">Speciality:</label>
+                    {{ form.specialty }}</p>
+                <p><label for="id_password">Password:</label>
+                    {{ form.password }}</p>
+                <div class="row form-group form-check">
+                    <div class="col-md-1  ">
+                        <p class=''> {{ form.is_active }}
+                    </div>
+                    <div class="col-md-11  ">
+                        <label class="form-check-label">
+                            I agree to receive the newsletter with vacancies on my email
+                        </label>
+                        </p>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success">Save</button>
+            </form>
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col-md-10 alert messages alert-success mx-auto text-left">
+            <h5 class="my-5 ">
+                If the list does not contain the city or specialty you need,
+                then you can fill out the <a href="{% url 'contact' %}"> form </a>
+                with your wishes. After the required city and specialty will be added to the list,
+                you will receive a confirmation letter to the e-mail address you specified.
+            </h5>
+        </div>
+    </div>
+{% endblock content %}
