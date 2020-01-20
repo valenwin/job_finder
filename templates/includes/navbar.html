@@ -27,30 +27,15 @@
                 <a href="{% url 'home_page' %}" class="active">Home</a>
             </li>
             <li>
-                <a href="#choose" class="scroll">About</a>
-            </li>
-            <li>
                 <a href="{% url 'scraping:search_job_url' %}" class="active">Search Job</a>
             </li>
             <li>
                 <a href="{% url 'scraping:vacancy_list_url' %}" class="active">Vacancies</a>
             </li>
             <li>
-                <a href="#overview" class="scroll">Overview</a>
-            </li>
-            <li>
-                <a href="#portfolio" class="scroll">Your future</a>
-            </li>
-            <li>
-                <a href="#faq" class="scroll">Faq's</a>
-            </li>
-            <li>
-                <a href="#contact" class="scroll">Contact</a>
-            </li>
-            <li>
                 <button type="button" class="btn w3ls-btn" data-toggle="modal" aria-pressed="false"
                         data-target="#exampleModalCenter2">
-                    Login
+                    <a href="{% url 'subscribers:subscribe_url' %}">Subscribe</a>
                 </button>
             </li>
         </ul>

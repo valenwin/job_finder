@@ -1,7 +1,7 @@
-# from django.urls import path
-# from .views import
-#
-# urlpatterns = [
-#     path('', search_job, name='search_job_url'),
-#
-# ]
+from django.urls import path
+from .views import subscribe
+
+urlpatterns = [
+    path('', subscribe, name='subscribe_url'),
+
+]

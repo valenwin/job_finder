@@ -1,7 +1,7 @@
 from django import forms
 
 from scraping.models import Speciality, City
-from subscribers.models import Subscriber
+from .models import Subscriber
 
 
 class SubscriberModelForm(forms.ModelForm):

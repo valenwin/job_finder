@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Sign Up
+{% endblock title %}
+
+{% block header %}
+    <header>
+        {% include 'includes/navbar.html' %}
+    </header>
+{% endblock %}
+
+{% block content %}
+    <div class="row my-5">
+        <div class="col-md-10">
+            <h1 class="my-5 text-center">Subscribe</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 mx-auto text-left">
+            <form method="post" action="">
+                {% csrf_token %}
+
+                {% for field in form %}
+                    <div class="form-group has-feedback">
+
+                        {% if field.errors %}
+                            <div class="alert alert-danger">
+                                {{ field.errors }}
+                            </div>
+                        {% endif %}
+
+                        {% if field.name == 'is_active' %}
+                            <div class="row form-group form-check">
+                                <div class="col-md-1  ">
+                                    <p class=''> {{ field }}
+                                </div>
+                                <div class="col-md-11  ">
+                                    <label class="form-check-label">
+                                        I agree to receive the newsletter with vacancies on my email
+                                    </label>
+                                    </p>
+                                </div>
+                            </div>
+                        {% else %}
+                            {{ field.label }}
+                            {{ field }}
+                        {% endif %}
+
+                    </div>
+                {% endfor %}
+                <button type="submit" class="btn btn-primary submit mt-2">Save</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

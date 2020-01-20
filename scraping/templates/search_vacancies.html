@@ -13,17 +13,18 @@
 {% block content %}
     <div class="row  my-5">
         <div class="col-md-10 mx-auto">
-            <h1 class="my-5 text-center">Сервис по сбору вакансий</h1>
-            <p> Вакансии размещаются на большом количестве украинских сайтов по поиску работы.
-                Но наиболее активно и более полно, их публикуют лишь некоторые.
-                Каждый день эти сайты анализируются на предмет новых вакансий, согласно запросов от подпсчиков -
-                в каких городах и какие специальности искать.
-                Все подходящие вакансии, которые были опубликованы на этих сайтах за последние сутки,
-                записываются в базу данных и рассылаюстя подписчикам, согласно их предпочтений.
-                Вы можете просмартивать актуальные вакансии, просто выбрав необходимый город и специальность.
-                {#            Или же, пройдя несложную <a href="{% url 'create' %}"> регистрацию</a>, #}
-                получать на e-mail каждый день письмо со списком новых вакансий за последние сутки по выбранной Вами
-                специальности.</p>
+            <h1 class="my-5 text-center">Job Collection Service </h1>
+            <p> Jobs are posted on a large number of Ukrainian job search sites.
+                But most actively and more fully, they are published only by a few.
+                Every day, these sites are analyzed for new vacancies,
+                according to requests from sub-subscribers -
+                in which cities and what specialties to look for.
+                All suitable vacancies that have been published on these sites over the past day,
+                are recorded in the database and sent to subscribers according to their preferences.
+                You can review current vacancies simply by selecting the necessary city and specialty.
+                Or, after going through a simple <a href="{% url 'subscribers:subscribe_url' %}">
+                subscribe form </a>, receive an e-mail every day with a list of new vacancies for the last day on your chosen specialty.
+            </p>
         </div>
     </div>
 

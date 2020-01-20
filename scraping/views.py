@@ -25,7 +25,7 @@ def vacancy_list(request):
         except ValueError:
             raise Http404('Страница не найдена')
 
-        vacancies = Vacancy.objects.filter(city=city_id, speciality=speciality_id, timestamp=today)
+        vacancies = Vacancy.objects.filter(city=city_id, speciality=speciality_id)
 
         if vacancies:
             return render(request, 'vacancies_list.html', {
