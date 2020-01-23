@@ -1,46 +1,65 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-    Search Job
+    Search IT Job
 {% endblock title %}
 
 {% block header %}
-    <header>
+    <header class="index-banner" style="background-image: url({% static 'img/bg-masthead.jpg' %})">
         {% include 'includes/navbar.html' %}
+        <!-- banner -->
+        <div class="banner layer" id="home">
+            <div class="container">
+                <div class="row banner-text">
+                    <div class="slider-info col-lg-8">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto" style="color: #ffffff">
+                                <h1 data-aos="fade-down">
+                                    <i class="fa fa-search"></i>&nbsp;Job searching
+                                </h1>
+                                <form method="get" action="">
+                                    {% csrf_token %}
+                                    {{ form.as_p }}
+                                    <button type="submit" class="btn btn-primary mt-4 mr-2">
+                                        Search
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //banner -->
     </header>
 {% endblock %}
 
 {% block content %}
-    <div class="row  my-5">
-        <div class="col-md-10 mx-auto">
-            <h1 class="my-5 text-center">Job Collection Service </h1>
-            <p> Jobs are posted on a large number of Ukrainian job search sites.
-                But most actively and more fully, they are published only by a few.
-                Every day, these sites are analyzed for new vacancies,
-                according to requests from sub-subscribers -
-                in which cities and what specialties to look for.
-                All suitable vacancies that have been published on these sites over the past day,
-                are recorded in the database and sent to subscribers according to their preferences.
-                You can review current vacancies simply by selecting the necessary city and specialty.
-                Or, after going through a simple <a href="{% url 'subscribers:subscribe_url' %}">
-                subscribe form </a>, receive an e-mail every day with a list of new vacancies for the last day on your chosen specialty.
-            </p>
+    <div class="container">
+        <div class="row my-5">
+            <div class="col">
+                <h1 class="my-5 text-center">{{ jobs_qty }} Vacancies</h1>
+            </div>
         </div>
-    </div>
 
-
-    <div class="row">
-        <div class="col-md-8 mx-auto">
-            <form method="get" action="{% url 'scraping:vacancy_list_url' %}">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <div class="col-12 col-sm-6 col-md-6 col-lg-2 mb-4 mb-lg-12">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block text-white btn-search">
-                        <span class="icon-search icon mr-2"></span>
-                        Search
-                    </button>
+        <div class="row my-5">
+            {% if jobs %}
+                {% for job in jobs %}
+                    <div class="col-12 text-left">
+                        <h4><a href='{{ job.href }}'>{{ job.title }}</a></h4>
+                        <p>{{ job.description }}</p><br/>
+                        <p>Вакансия от компании: {{ job.company }}<small>
+                            Date of scraping: {{ today | date:"d-m-Y" }}</small></p>
+                        <hr>
+                        <br/>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-12 text-center">
+                    <h2>No vacancies yet...Start search...don't lose your chance</h2>
                 </div>
-            </form>
+            {% endif %}
         </div>
     </div>
-{% endblock content %}
+{% endblock %}
