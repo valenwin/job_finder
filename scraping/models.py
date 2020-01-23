@@ -7,6 +7,7 @@ class City(models.Model):
     class Meta:
         verbose_name = 'City'
         verbose_name_plural = 'Cities'
+        ordering = ['name']
 
     def __str__(self):
         return f'{self.name}'
@@ -18,6 +19,7 @@ class Speciality(models.Model):
     class Meta:
         verbose_name = 'Speciality'
         verbose_name_plural = 'Specialities'
+        ordering = ['name']
 
     def __str__(self):
         return f'{self.name}'
@@ -34,7 +36,7 @@ class Url(models.Model):
     city = models.ForeignKey(City, on_delete=models.CASCADE)
     speciality = models.ForeignKey(Speciality, on_delete=models.CASCADE)
     site = models.ForeignKey(Site, on_delete=models.CASCADE)
-    url_address = models.CharField(max_length=250, unique=True)
+    url_address = models.CharField(max_length=250)
 
     def __str__(self):
         return f'Speciality: {self.speciality} in {self.city} on site {self.site}'

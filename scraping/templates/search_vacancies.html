@@ -16,7 +16,7 @@
                         <div class="row">
                             <div class="col-md-8 mx-auto" style="color: #ffffff">
                                 <h1 data-aos="fade-down">
-                                    <i class="fa fa-search"></i>&nbsp;Job searching
+                                    <i class="fa fa-search"></i>&nbsp;Search Developer Job
                                 </h1>
                                 <form method="get" action="">
                                     {% csrf_token %}
@@ -39,7 +39,10 @@
     <div class="container">
         <div class="row my-5">
             <div class="col">
+                <hr>
                 <h1 class="my-5 text-center">{{ jobs_qty }} Vacancies</h1>
+                <h3 class="my-5 text-center">{{ city }} {{ speciality }}</h3>
+                <hr>
             </div>
         </div>
 

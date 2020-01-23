@@ -39,7 +39,9 @@ def search_vacancies(request):
             'form': form,
             'jobs': jobs,
             'today': today,
-            'jobs_qty': jobs_qty
+            'jobs_qty': jobs_qty,
+            'city': city,
+            'speciality': speciality
         })
 
     return render(request, 'search_vacancies.html', {
