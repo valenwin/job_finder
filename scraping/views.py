@@ -7,6 +7,10 @@ from .models import City, Speciality, Url, Site
 from .forms import FindVacancyForm
 
 
+def index(request):
+    return render(request, 'base.html')
+
+
 def search_vacancies(request):
     today = date.today()
     form = FindVacancyForm()

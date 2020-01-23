@@ -16,7 +16,7 @@
                         <div class="row">
                             <div class="col-md-8 mx-auto" style="color: #ffffff">
                                 <h1 data-aos="fade-down">
-                                    <i class="fa fa-search"></i>&nbsp;Search Developer Job
+                                    <i class="fa fa-search"></i>&nbsp;Search Job for Developers
                                 </h1>
                                 <form method="get" action="">
                                     {% csrf_token %}
@@ -52,7 +52,7 @@
                     <div class="col-12 text-left">
                         <h4><a href='{{ job.href }}'>{{ job.title }}</a></h4>
                         <p>{{ job.description }}</p><br/>
-                        <p>Вакансия от компании: {{ job.company }}<small>
+                        <p>Vacancies from company: {{ job.company }}<small>
                             Date of scraping: {{ today | date:"d-m-Y" }}</small></p>
                         <hr>
                         <br/>

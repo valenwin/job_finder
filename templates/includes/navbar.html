@@ -4,13 +4,13 @@
 <nav class="main-header">
     <div id="brand" data-aos="zoom-in-up">
         <div id="logo">
-            <a href="{% url 'home_page' %}">
+            <a href="{% url 'home_page_url' %}">
                 <i class="fab fa-blackberry"></i>
             </a>
         </div>
         <div id="word-mark">
             <h1>
-                <a href="{% url 'home_page' %}">Job Finder</a>
+                <a href="{% url 'home_page_url' %}">Job Finder</a>
             </h1>
         </div>
     </div>
@@ -24,7 +24,7 @@
         </div>
         <ul class="text-center text-capitalize nav-agile" data-aos="zoom-in-up">
 
-            <li><a href="{% url 'home_page' %}" class="active">Home</a></li>
+            <li><a href="{% url 'home_page_url' %}" class="active">Home</a></li>
             <li><a href="{% url 'scraping:search_job_url' %}" class="active">Search IT Jobs</a></li>
 
             {% if request.user.is_authenticated %}

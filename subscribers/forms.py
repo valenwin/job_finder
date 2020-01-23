@@ -26,4 +26,4 @@ class SubscriberModelForm(forms.ModelForm):
 
     class Meta:
         model = Subscriber
-        fields = ('email', 'city', 'specialty', 'password', 'is_active')
+        fields = ('email', 'city', 'speciality', 'password', 'is_active')

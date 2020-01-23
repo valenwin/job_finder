@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import home_page
+from scraping.views import index
 
 urlpatterns = [
+    path('', index, name='home_page_url'),
     path('admin/', admin.site.urls),
-    path('', home_page, name='home_page'),
     path('scraping/', include(('scraping.urls', 'scraping'), namespace='scraping')),
     path('subscribers/', include(('subscribers.urls', 'subscribers'), namespace='subscribers')),
     path('contact/', include(('contact.urls', 'contact'), namespace='contact')),
