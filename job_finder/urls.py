@@ -21,5 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_page, name='home_page'),
     path('scraping/', include(('scraping.urls', 'scraping'), namespace='scraping')),
-    path('subscribers/', include(('subscribers.urls', 'subscribers'), namespace='subscribers'))
+    path('subscribers/', include(('subscribers.urls', 'subscribers'), namespace='subscribers')),
+    path('contact/', include(('contact.urls', 'contact'), namespace='contact')),
+    path('user/', include(('user.urls', 'user'), namespace='user')),
 ]

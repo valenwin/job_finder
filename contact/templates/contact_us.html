@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Contact Us
+{% endblock %}
+
+{% block banner %}
+{% endblock %}
+
+{% block content %}
+
+    <section class="contact py-5" id="contact">
+        <div class="container py-lg-3">
+            <h3 class="heading mb-5 text-center" data-aos="zoom-in" style="margin-top: 100px;"> Get in touch</h3>
+            <form action="#" method="post" data-aos="fade-up">
+                 {% csrf_token %}
+                <div class="row">
+                    {% for field in form %}
+                        {% if field.label != 'Description' %}
+                            <div class="col-md-6 styled-input mt-1 mb-2">
+                               {{ field }}
+                            </div>
+                        {% else %}
+                             <div class="col-md-12 styled-input mt-3 mb-3">
+                               {{ field }}
+                            </div>
+                        {% endif %}
+                    {%  endfor %}
+                </div>
+                <div class="click text-center mt-3">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </section>
+
+{% endblock %}

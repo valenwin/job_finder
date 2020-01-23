@@ -23,30 +23,25 @@
             </div>
         </div>
         <ul class="text-center text-capitalize nav-agile" data-aos="zoom-in-up">
-            <li>
-                <a href="{% url 'home_page' %}" class="active">Home</a>
-            </li>
-            <li>
-                <a href="{% url 'scraping:search_job_url' %}" class="active">Search IT Jobs</a>
-            </li>
-            <li>
-                <a href="" class="active">Sign Up</a>
-            </li>
-            <li>
-                <a href="" class="active">Sign In</a>
-            </li>
-            <li>
-                <a href="" class="active">Logout</a>
-            </li>
-            <li>
-                <a href="" class="active">Contact Us</a>
-            </li>
+
+            <li><a href="{% url 'home_page' %}" class="active">Home</a></li>
+            <li><a href="{% url 'scraping:search_job_url' %}" class="active">Search IT Jobs</a></li>
+
+            {% if request.user.is_authenticated %}
+                <li><a href="{% url 'user:sign_out_url' %}" class="active">Logout</a></li>
+            {% else %}
+                <li><a href="{% url 'user:sign_up_url' %}" class="active">Sign Up</a></li>
+                <li><a href="{% url 'user:sign_in_url' %}" class="active">Sign In</a></li>
+            {% endif %}
+
+            <li><a href="{% url 'contact:contact_us_url' %}" class="active">Contact Us</a></li>
             <li>
                 <button type="button" class="btn w3ls-btn" data-toggle="modal" aria-pressed="false"
                         data-target="#exampleModalCenter2">
                     <a href="{% url 'subscribers:subscribe_url' %}">Subscribe</a>
                 </button>
             </li>
+
         </ul>
     </div>
 </nav>
