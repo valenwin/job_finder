@@ -28,7 +28,7 @@ SECRET_KEY = SECRET_KEY_
 DEBUG = True
 
 #for heroku app
-ALLOWED_HOSTS = ['job-finder-scraping-service.herokuapp.com']
+ALLOWED_HOSTS = ['job-finder-scraping.herokuapp.com']
 
 #ALLOWED_HOSTS = []
 
