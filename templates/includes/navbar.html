@@ -33,12 +33,10 @@
                 <li><a href="{% url 'user:sign_up_url' %}" class="active">Sign Up</a></li>
                 <li><a href="{% url 'user:sign_in_url' %}" class="active">Sign In</a></li>
             {% endif %}
-
-            <li><a href="{% url 'contact:contact_us_url' %}" class="active">Contact Us</a></li>
             <li>
                 <button type="button" class="btn w3ls-btn" data-toggle="modal" aria-pressed="false"
                         data-target="#exampleModalCenter2">
-                    <a href="{% url 'subscribers:subscribe_url' %}">Subscribe</a>
+                    <a href="{% url 'contact:contact_us_url' %}">Contact Us</a>
                 </button>
             </li>
 
