@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'scraping',
-    'subscribers',
     'contact',
     'user',
 
