@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import django_heroku
 
 from .secret import DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, SECRET_KEY_
 
@@ -24,9 +25,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = SECRET_KEY_
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+#for heroku app
+ALLOWED_HOSTS = ['job-finder-scraping-service.herokuapp.com']
+
+#ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -135,3 +139,6 @@ STATICFILES_DIRS = [
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+#for heroku app
+django_heroku.settings(locals())
